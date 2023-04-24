@@ -1,0 +1,68 @@
+.header {
+	height: 50px;
+  	width: 100%;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+}
+
+.MuiBottomNavigationAction-root:focus {
+	outline: none;
+}
+.MuiBottomNavigationAction-selected .MuiBottomNavigationAction-icon {
+	color: white; /* Set the desired color for the icon */
+}
+
+.navActionContainer{
+	flex-basis: 33.33%;
+	max-width: none;
+}
+
+.page {
+  	width: 100%;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.wrapperContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  	width: 500px;
+}
+
+.parent {
+	display: flex;
+	justify-content: center; /* horizontally center items */
+	align-items: center; /* vertically center items */
+}
+
+.dotsContainer {
+	display: flex;
+	gap: 15px;
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.iconContainer {
+	display: flex;
+	cursor: pointer;
+}
+
+.icon {
+	opacity: 1;
+}
