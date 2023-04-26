@@ -1,7 +1,5 @@
 /Dataset
-/notebooks/.ipynb_checkpoints/
-/notebooks/backup/
-/notebooks/myproject/
+/notebooks/*
 /models/*
 /.ipynb_checkpoints/
 .idea/*
