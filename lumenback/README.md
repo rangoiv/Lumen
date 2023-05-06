@@ -10,6 +10,9 @@ latest version of django needed, if absent, run this:
 
 Install all missing modules with pip.
 
+Create "models" folder inside lumenback
+put MLBLCLA_model.pth inside that folder.
+
 Run server like:
 
 `$ python manage.py runserver`
