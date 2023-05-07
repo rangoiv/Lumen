@@ -1,7 +1,9 @@
 /Dataset
 /notebooks/*
 /models/*
+/lumenback/models/*
 /.ipynb_checkpoints/
+/lumenfront/package-lock.json
 .idea/*
 Grafovi.ods
 /mp3_2_wav.py

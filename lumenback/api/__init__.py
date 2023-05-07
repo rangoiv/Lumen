@@ -1,6 +1,6 @@
 from fastai.data.all import *
 from fastai.vision.all import *
-from IPython.utils import io
+#from IPython.utils import io
 import librosa
 sys.path.append('../')
 
@@ -111,8 +111,8 @@ def get_sl_windows(song, step=sample_rate):
 def predict(learn, song, step=sample_rate, tresh=0.8, perc=0.25):
     instr = np.zeros(len(learn.dls.vocab))
     for n, sl in enumerate(get_sl_windows(song)):
-        with io.capture_output() as captured:
-            instr[learn.predict(sl)[1] > tresh] += 1
+        #with io.capture_output() as captured:
+        instr[learn.predict(sl)[1] > tresh] += 1
     return learn.dls.vocab[instr > (n+1)*perc]
 
 print("MODEL LOADED!")

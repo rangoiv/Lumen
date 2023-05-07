@@ -1,13 +1,62 @@
 
 import React from 'react';
 
+import celloImg from './assets/cello.png';
+import clarinetImg from './assets/clarinet.png';
+import fluteImg from './assets/flute.png';
+import acousticGuitarImg from './assets/acguitar.png';
+import electricGuitarImg from './assets/elguitar.png';
+import organImg from './assets/organ.png';
+import pianoImg from './assets/piano.png';
+import saxophoneImg from './assets/saxophone.png';
+import trumpetImg from './assets/trumpet.png';
+import violinImg from './assets/violin.png';
+import voiceImg from './assets/voice.png';
+import "./styles/waiting.css"
+
+const instrumentsImages = {
+  "cel": celloImg,
+  "cla": clarinetImg,
+  "flu": fluteImg,
+  "gac": acousticGuitarImg,
+  "gel": electricGuitarImg,
+  "org": organImg,
+  "pia": pianoImg,
+  "sax": saxophoneImg,
+  "tru": trumpetImg,
+  "vio": violinImg,
+  "voi": voiceImg,
+};
+
+const instrumentsText = {
+    "cel" : "cello",
+    "cla" : "clarinet",
+    "flu" : "flute",
+    "gac" : "acoustic guitar",
+    "gel" : "electric guitar",
+    "org" : "organ",
+    "pia" : "piano",
+    "sax" : "saxophone",
+    "tru" : "trumpet",
+    "vio" : "violin",
+    "voi" : "voice",
+}
+
 export const InstrumentsSwitch = (props) => {
 	
+	
+
 	if (!props.instruments){
 		return(<div></div>)
 	}
 	if(props.instruments === -3){
-		return(<div><h1>...</h1></div>)
+		return(
+			<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row'}}>
+				<h1 className="dotW dotW1">.</h1>
+				<h1 className="dotW dotW2">.</h1>
+				<h1 className="dotW dotW3">.</h1>
+			</div>
+		)
 	}
 	if(props.instruments === -2){
 		return(<div><h1>Couldn't send that file!</h1></div>)
@@ -17,17 +66,23 @@ export const InstrumentsSwitch = (props) => {
 	}
 	
 	return (
+		<div>
+		<h2 style={{ fontSize: '24px', marginRight: '16px' }}>Your instruments are:</h2>	
+		{
 		Object.entries(props.instruments).map(([key, value], index) => {
 			if (value === 1) {
 				return (
-					<div key={index}>
-						<h1>{key}</h1>
+					<div key={index} >
+						<img src={instrumentsImages[key]} alt={instrumentsText[key]} style={{ width: '50px', borderRadius: '50%', marginBottom: '16px' }} />
 					</div>
 				);}
 			return null;
 		})
+		}</div>
 	);
 };
+
+
 
 const sendFileToBackend = async (file) => {
 	const formData = new FormData();
