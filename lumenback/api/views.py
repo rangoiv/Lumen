@@ -21,9 +21,6 @@ instruments = {
     "voi" : 0
 }
 
-def index(request):
-    return render(request, "index.html")
-
 #@api_view(['POST'])
 @csrf_exempt
 def processFile(request):

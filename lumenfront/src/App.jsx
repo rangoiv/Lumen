@@ -8,7 +8,6 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import InfoIcon from '@mui/icons-material/Info';
 import HomeIcon from '@mui/icons-material/Home';
-import { Container } from '@mui/material';
 import Record from './Record';
 
 const App = () => {
