@@ -1,13 +1,11 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse, JsonResponse, HttpResponseBadRequest
-import librosa
-from django import forms
-from . import predict, learn
-from django.conf import settings
-from django.urls import resolve
 from django.shortcuts import render
+from django.http import JsonResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
+import librosa
 from copy import copy
+from . import predict, learn
+
+
 
 instruments = {
     "cel" : 0 ,
@@ -22,15 +20,6 @@ instruments = {
     "vio" : 0 ,
     "voi" : 0
 }
-
-def print_trusted_origins(request):
-    try:
-        trusted_origins = settings.CORS_ORIGIN_WHITELIST
-        response = "Trusted Origins: " + ', '.join(trusted_origins)
-        return HttpResponse(response)
-    except:
-        return HttpResponse("All")
-    
 
 def index(request):
     return render(request, "index.html")

@@ -1,0 +1,33 @@
+.dotW {
+    animation-name: dot-color-change;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+  
+.dotW1 {
+    animation-delay: 0ms;
+}
+
+.dotW2 {
+    animation-delay: 333ms;
+}
+
+.dotW3 {
+    animation-delay: 666ms;
+}
+
+@keyframes dot-color-change {
+0% {
+    color: white;
+}
+50% {
+    color: white;
+}
+60% {
+    color: #4a4a4a;
+}
+100% {
+    color: #4a4a4a;
+}
+}

@@ -96,7 +96,7 @@ const Record = () => {
 			/>
 			<InstrumentsSwitch instruments={instruments}/>
 		</div>
-	  ) : (<div className='page'><h1>No mic access!</h1></div>);
+	  ) : (<div className='page'><h1>No microphone access!</h1></div>);
 };
 	
 export default Record;

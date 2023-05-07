@@ -4,10 +4,11 @@ const About = () => {
 	
 	return (
 		<div className='page'>
-			<h1>This is PyTissue App</h1>
-			<div>
-			<h1>My Responsive Web Page</h1>
-			</div>
+			<h2 style={{ fontSize: '24px', marginRight: '16px' }}>
+				Hey! We are PyTissue!<br/>
+				Your favorite app for finding out instruments in a song
+			</h2>
+			
 		</div>
 		);
 	};
