@@ -47,7 +47,7 @@ export const InstrumentsSwitch = (props) => {
 	
 
 	if (!props.instruments){
-		return(<div></div>)
+		return null
 	}
 	if(props.instruments === -3){
 		return(
@@ -59,15 +59,15 @@ export const InstrumentsSwitch = (props) => {
 		)
 	}
 	if(props.instruments === -2){
-		return(<div><h1>Couldn't send that file!</h1></div>)
+		return(<div><h2>Couldn't send that file!</h2></div>)
 	}
 	if(props.instruments === -1){
-		return(<div><h1>Backend couldn't handle that file!</h1></div>)
+		return(<div><h2>Backend couldn't handle that file!</h2></div>)
 	}
 	
 	return (
 		<div>
-		<h2 style={{ fontSize: '24px', marginRight: '16px' }}>Your instruments are:</h2>	
+		<h2>Your instruments are:</h2>	
 		{
 		Object.entries(props.instruments).map(([key, value], index) => {
 			if (value === 1) {

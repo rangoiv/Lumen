@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Do a POST to /lumen/api/processFile/ with a FILE called \"file\" ")
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('lumen/api/', include("api.urls")),
+    path('', index, name = 'index')
 ]

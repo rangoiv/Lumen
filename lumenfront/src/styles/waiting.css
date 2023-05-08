@@ -1,3 +1,9 @@
+h2 {
+    font-size: 24px;
+    margin: 16px
+}
+
+
 .dotW {
     animation-name: dot-color-change;
     animation-duration: 1s;
