@@ -15,9 +15,9 @@ U ovom direktoriju nalazi se po jedna datoteka za svaki folder (kako bi se folde
     - IRMAS_Test_Data (preostalih 80% originalnog IRMAS_Validation_Data, koristi se kao validation set)
     - test_dataset (dataset koji je poslan kao zadatak)
 
-Bitno je da je IRMAS_Training_Data folder postavljen kao ovdje (zajedno sa datotekama) jer ih fastai učitava prilikom kreiranja dataloadera i modela. Pomoću svih dostupnih datoteka napravit će konačni vocabulary (cel, cla, flu ... - ukupno 11 instrumenata). Ako nema barem jedne datoteke od svih instrumenata, neće izgraditi cijeli vocabulary. Stoga neće moći ni učitati težine našeg modela, jer ima drugačiju građu (drugačiji output layer).
-
-Učitavanje oznaka (eng. label) ovisi o folderu. Zato je također bitno da se datoteke ne miješaju, već se postave točno kako smo ih mi postavili.
+Učitavanje oznaka (eng. label) ovisi o folderu. 
+U IRMAS_Training_Data ih učitava preko regexa - prva oznaka unutar uglatih zagrada. 
+Sve ostale učitava kao u IRMAS_Validation_Data - iz tekstualne datoteke.
 
 ### BITNO!
 
