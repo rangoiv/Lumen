@@ -9,7 +9,9 @@
 /lumenback/api/__pycache__
 /lumenback/api/migrations/__pycache__
 /lumenback/lumenweb/__pycache__
+/lumenback/schema.yml
 /lumenfront/package-lock.json
+/lumenfront/node_modules
 /.ipynb_checkpoints/
 /mp3_2_wav.py
 /preds*

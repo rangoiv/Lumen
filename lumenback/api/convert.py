@@ -17,5 +17,5 @@ def convert(notebook_path, file_path):
 
     the_python_script, meta = pexp.from_notebook_node(the_notebook_nodes)
 
-    with open(file_path, 'w+', encoding='utf-8') as f:
-        f.writelines(the_python_script)
+    with open(file_path, "w", encoding='utf-8') as file:
+        file.writelines(the_python_script)
