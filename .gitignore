@@ -7,6 +7,7 @@
 /lumenback/models
 /lumenback/api/main.py
 /lumenback/api/__pycache__
+/lumenback/api/__pycache__/*
 /lumenback/api/migrations/__pycache__
 /lumenback/lumenweb/__pycache__
 /lumenback/schema.yml

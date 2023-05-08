@@ -4,30 +4,25 @@ _PyTissue_: Goran Ivanković, Luka Ivanković
 
 ## How to setup
 
-List of dependencies is in requirements.txt.
-You can create virtual environment with above dependencies, instructions:
-https://stackoverflow.com/questions/14684968/how-to-export-virtualenv
+Before running, you need to satisfy dependencies, commands should be run in following order:
 
-Create "models" folder: "lumenback/models"
-put MLBLCLA_model.pth inside that folder.
+pip install django
+pip install django-cors-headers
+pip install librosa
+pip install torch
+pip install fastai
 
-After that navigate to this directory "lumenback" and run following:
+Also, install:
+
+pip install nbformat
+pip install nbconvert
+
+After that, you should run manage.py like this:
 
 `$ python manage.py runserver`
 
 Make sure all dependencies are satisfied before running command above.
-
-### Not working?
-
-If setuping virtual environment didn't work, you can run following commands in this order:
-
-pip install django
-pip install django-cors-headers
-pip install torch
-pip install fastai
-pip install librosa
-
-Or install any dependency that is missing in your python environment.
+Install any dependency that is missing in your python environment.
 
 Aditional help with installing above dependencies:
 
