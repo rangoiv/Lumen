@@ -5,7 +5,6 @@ import warnings
 from fastai.data.all import *
 from fastai.vision.all import *
 import warnings
-from api.main import get_learner, ToSpec, get_spec, test_splitter, get_song_files
 import sys
 
 notebook_path = "../main.ipynb"
@@ -34,6 +33,7 @@ def run_only_once():
 
     print(f"- Loading model from {model_path}")
 
+    from api.main import get_learner, ToSpec, get_spec, test_splitter, get_song_files
     learn = get_learner(items=[train_path/"cel"/"[cel][cla]0001__1.wav"],
                     augm=[], tfms=[ToSpec(get_spec)], arch=models.resnet18,
                     splitter=test_splitter,
