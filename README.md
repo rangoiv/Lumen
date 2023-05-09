@@ -6,16 +6,6 @@ _PyTissue_: Goran Ivanković, Luka Ivanković
 
 Program koji prepoznaje pojavljene instrumente u `.wav` datotekama od 11 mogućih instrumenata.
 
-## Dataset
-
-Mogući instrumenti i njihove oznake su: violončelo (cel), klarinet (cla), flauta (flu),
-akustična gitara (gac), električna gitara (gel ), orgulje (org), klavir (pia), saksofon (sax),
-truba (tru), violina (vio) i ljudski pjevački glas (voi).
-
-Dodatno, neke od datoteka imaju bilješke u nazivu datoteke koje se odnose na prisut-
-nost ([dru]) ili nepostojanje ([nod]) bubnjeva i glazbeni žanr: country-folk ([cou-fol]),
-klasika ([cla]) , pop-rock ([pop-roc]), latino-soul ([lat-sou]).
-
 ## Struktura direktorija
 
 - **main.ipynb** -
@@ -23,7 +13,7 @@ Ovdje se nalazi kod za učitavanje neuronske mreže, njezino treniranje te sve a
 Također sadrži funkciju koja kreira konačni json za test dataset (na kraju) bilježnice.
 
 - **lumenback** -
-Direktorij za Django API. Pri pokretanju učitava pomoće funkcije (za klizeće prozore i
+Direktorij za Django API. Pri pokretanju učitava pomoćne funkcije (za klizeće prozore i
 slično) iz bilježnice main.ipynb. Osim toga učita najbolji model koji imamo iz foldera
 models. Pomoću toga detektira instrumente u poslanim datotekama.
 Upute za pokretanje nalaze se u tom direktoriju.
@@ -35,7 +25,7 @@ Direktorij za React frontend aplikaciju. Aplikacija ima sučelje za snimanje zvu
 Dodatne bilježnice za analizu dataseta
 
 - **models** -
-Spremljene težine modela. Trebao bi biti spremljen samo `MLBLCLA2_model.pth` koji daje najbolje rezultate.
+Spremljene težine modela. Trebao bi biti spremljen samo `MLBLCLA2_model.pth` koji daje najbolje rezultate. **Bitno**: te težine *ne* nalaze se u github repozitoriju, ali će biti predane u rješenju. Program bez njih ne može učitati model i neće raditi.
 
 - **environments** - 
 Svi conda environmenti koji su potrebni. Dodatne upute se nalaze u *Kako pokrenuti*.
@@ -43,10 +33,10 @@ Svi conda environmenti koji su potrebni. Dodatne upute se nalaze u *Kako pokrenu
 - **Dataset** - 
 Tu se nalazi IRMAS dataset kao opisan u našoj dokumentaciji. Dodatne upute nalaze se unutra u `README` datoteci.
 
+- **preds.json** - Predviđanja modela za testni dataset.
 
-## Kako pokrenuti?
 
-Kako pokrenuti frontend nalazi se u lumenfront `README` datoteci
+## Kako učitati conda okruženje?
 
 Za backend i bilježnicu imamo dvije opcije:
 
@@ -54,16 +44,34 @@ Za backend i bilježnicu imamo dvije opcije:
 1) Sa GPU
 
 Za obje opcije spremili smo conda okruženja u  environments folder.
-Prednost korištenja GPU je puno brže izvršavanje. 
+Prednost korištenja GPU je puno brže izvršavanje.
+U folderu environments nalaze se sljedeća dva okruženja:
 
-### Kako učitati conda okruženje
+- fastai-gpu.yml: okruženje za wsl za GPU
+- environment.yml: obično okruženje
 
-Pokrenuti `conda env create -f <environment.yml> --name <name>`. Pritom zamijeniti `<environment.yml>` sa odgovarajućim okruženjem te `<name>` sa imenom.
+Pokrenuti `conda env create -f <environment.yml>`. Pritom zamijeniti `<environment.yml>` sa odgovarajućim okruženjem.
+
+Nakon učitavanja okruženja, pratiti upute za pokretanje.
 
 ### Napomene za GPU
 
 - Potrebno je imati Nvidia GPU (jer se koristi Cuda). 
+- Koristili smo wsl za i mambu za kreiranje okruženja.
 - Dodatne upute nalaze se u `GPU_SETUP.md`. 
 
-Ukratko, koristili smo `wsl`, na njega preuzeli **cudu** i **mambu** (brža verzija conde) i onda preuzeli potrebne Python biblioteke. Trebalo bi raditi i sa običnom condom, ali nismo provjerili.
+Ukratko, na `wsl` smo preuzeli **cudu** (program za korištenje Nvidia GPU) i **mambu** (brža verzija conde) te onda preuzeli potrebne Python biblioteke. Trebalo bi raditi i sa običnom condom, ali nismo provjerili. Sumnjamo da će raditi bez wsl-a, ali vrijedi pokušati.
+
+## Kako pokrenuti?
+
+Kako pokrenuti React frontend nalazi se u lumenfront `README` datoteci. 
+
+Kako pokrenuti Django backend nalazi se u lumenback `README` datoteci.
+
+Za pokretanje bilježnice, aktivirati odgovarajuće okruženje:
+
+`conda activate fastai` ili `conda activate pytissue`.
+
+Upisati `jupyter notebook` te otvoriti `main.ipynb` u pregledniku.
+
 
