@@ -3,9 +3,9 @@ from django.http import JsonResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
 import librosa
 from copy import copy
-from . import predict, learn, predict_multi, sample_rate
-
-
+from django.conf import settings
+from api.main import predict, predict_multi, sample_rate
+from api.convert import run_only_once
 
 instruments = {
     "cel" : 0 ,
@@ -32,9 +32,9 @@ def processFile(request):
         except:
             return(HttpResponseBadRequest("Not a song!"))
         response = copy(instruments)
-        for i, j in enumerate(predict_multi([y])[0][0]):
+        for i, j in enumerate(predict_multi(settings.LEARN, [y])[0][0]):
             if j:
-                response[learn.dls.vocab[i]] = 1
+                response[settings.LEARN.dls.vocab[i]] = 1
         return JsonResponse(response)
         
     return(HttpResponseBadRequest("No file!"))
