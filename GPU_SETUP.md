@@ -1,7 +1,5 @@
 # Prepoznavanje instrumenata - Lumen
 
-_PyTissue_: Goran Ivanković, Luka Ivanković
-
 ## How to setup fastai using GPU
 
 For this tutorial to work fine, you need to have Nvidia GPU and windows. For
