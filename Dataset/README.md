@@ -1,8 +1,5 @@
 # Dataset
 
-_PyTissue_: Goran Ivanković, Luka Ivanković
-
-
 ## Opis
 
 Mogući instrumenti i njihove oznake su: violončelo (cel), klarinet (cla), flauta (flu),

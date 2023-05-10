@@ -1,7 +1,5 @@
 # REST API FOR LUMEN APP
 
-_PyTissue_: Goran Ivanković, Luka Ivanković
-
 ## How to setup
 
 In ../environments directory there are 2 environents. This code should work on both environments.
@@ -16,7 +14,7 @@ check if it is correctly installed:
 
 Activate the environment:
 
-`$ conda activate pytissue`
+`$ conda activate lumen`
 
 ### Virtual env not working?
 

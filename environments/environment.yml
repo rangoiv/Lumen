@@ -1,4 +1,4 @@
-name: pytissue
+name: lumen
 channels:
   - defaults
 dependencies:

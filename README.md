@@ -1,7 +1,5 @@
 # Prepoznavanje instrumenata - Lumen
 
-_PyTissue_: Goran Ivanković, Luka Ivanković
-
 ## Zadatak
 
 Program koji prepoznaje pojavljene instrumente u `.wav` datotekama od 11 mogućih instrumenata.
@@ -70,7 +68,7 @@ Kako pokrenuti Django backend nalazi se u lumenback `README` datoteci.
 
 Za pokretanje bilježnice, aktivirati odgovarajuće okruženje:
 
-`conda activate fastai` ili `conda activate pytissue`.
+`conda activate fastai` ili `conda activate lumen`.
 
 Upisati `jupyter notebook` te otvoriti `main.ipynb` u pregledniku.
 

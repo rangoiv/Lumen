@@ -1,7 +1,5 @@
 # CLIENT FOR LUMEN APP
 
-_PyTissue_: Goran Ivanković, Luka Ivanković
-
 ## How to setup
 
 Versions that code was tested on:
